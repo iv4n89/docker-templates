@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  spring:
+    build: .
+    restart: always
+    secrets:
+      - db-password
+    environment:
+      # mysql
+      # MYSQL_HOST: <db_container_name>
+    networks:
+      - spring-<db>
+    
+secrets:
+  db-password:
+    file: db/password.txt
+
+networks:
+  spring-<db>: {}

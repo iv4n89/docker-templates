@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  node:
+    image: node:latest
+    ports:
+      - <portHost>:<portContainer>
+    container_name: node
+    command: bash -c 'npm i && npm run <scriptName>'
+    volumes:
+      - ./:/opt/app
+    working_dir: /opt/app

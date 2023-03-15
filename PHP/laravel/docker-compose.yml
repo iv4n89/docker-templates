@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  laravel:
+    build: 
+      context: .
+      target: dev
+    volumes:
+      - ./:/var/www/html
+      - .env.dev:/var/www/html/.env
+    ports:
+      - <hostPort>:80
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true

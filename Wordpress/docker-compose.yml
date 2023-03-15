@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - 80:80
+    restart: always
+    environment:
+      - WORDPRESS_DB_HOST=<dbContainer>
+      - WORDPRESS_DB_USER=<dbUser>
+      - WORDPRESS_DB_PASSWORD=<dbPassword>
+      - WORDPRESS_DB_NAME=<database>

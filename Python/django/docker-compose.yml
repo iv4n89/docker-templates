@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  django:
+    build: .
+    command: python manage.py runserver 0.0.0.0:<port>
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - <hostPort>:<containerPort>
+    networks:
+      - django-<db>
+    
+networks:
+  django-<db>: {}

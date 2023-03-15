@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo:4.2.0
+    restart: always
+    volumes:
+      - ./data:/data/db
+    networks:
+      - <backend>-mongo
+    expose:
+      - 27017
+    
+networks:
+  <backend>-mongo: {}

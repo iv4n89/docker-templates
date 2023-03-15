@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  flask:
+    build: 
+      context: .
+      target: builder
+    stop_signal: SIGING
+    environment:
+      - FLASK_SERVER_PORT=<port>
+    volumes:
+      - ./:/src
+    # depends_on:
+      # - <db>

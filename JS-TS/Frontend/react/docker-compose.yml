@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  react:
+    build: 
+      context: .
+      target: development
+    ports:
+      - <hostPort>:<containerPort>
+    volumes:
+      - ./src:/code/src
+    networks:
+      - react-<backend>
+    depends_on:
+      - <backendContainer>
+    
+networks:
+  - react-<backend>: {}

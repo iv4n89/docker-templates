@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  fastapi:
+    build: 
+      context: .
+      target: builder
+    container_name: fastapi
+    environment:
+      - PORT=<port>
+    ports:
+      - <hostPort>:<containerPort>
+    networks:
+      - fastapi-<db>
+
+networks:
+  fastapi-<db>: {}
