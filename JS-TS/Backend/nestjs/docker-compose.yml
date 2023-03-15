@@ -4,11 +4,9 @@ services:
   nestjs:
     build: 
       context: .
-      target: developmen
+      target: development
     volumes:
       - ./:/usr/src/app
-    env_file:
-      - .env
     command: npm run start:dev
     ports:
       - 3000:3000

@@ -15,4 +15,4 @@ services:
       - <backendContainer>
     
 networks:
-  - react-<backend>: {}
+  react-<backend>: {}
