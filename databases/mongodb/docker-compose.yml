@@ -6,10 +6,12 @@ services:
     restart: always
     volumes:
       - ./data:/data/db
-    networks:
-      - <backend>-mongo
+    # networks:
+    #   - <backend>-mongo
     expose:
       - 27017
+    ports:
+      - 27017:27017
     
-networks:
-  <backend>-mongo: {}
+# networks:
+#   <backend>-mongo: {}

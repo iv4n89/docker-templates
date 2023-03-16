@@ -9,10 +9,10 @@ services:
       - <hostPort>:<containerPort>
     volumes:
       - ./src:/code/src
-    networks:
-      - react-<backend>
-    depends_on:
-      - <backendContainer>
+    # networks:
+    #   - react-<backend>
+    # depends_on:
+    #   - <backendContainer>
     
-networks:
-  react-<backend>: {}
+# networks:
+#   react-<backend>: {}
