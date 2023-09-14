@@ -1,0 +1,19 @@
+{
+    "name": "workspace",
+    "dockerComposeFile": ["docker-compose.yml"],
+    "service": "workspace",
+    "workspaceFolder": "/home/vscode/workspace",
+    "remoteUser": "vscode",
+    "shutdownAction": "stopCompose",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+				"vscjava.vscode-java-pack",
+				"vscjava.vscode-spring-initializr",
+				"vscjava.vscode-gradle",
+				"vscjava.vscode-spring-boot-dashboard"
+			]
+        }
+    }
+  }
+  
